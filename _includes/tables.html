@@ -1,0 +1,10 @@
+
+{% assign table = [] %}
+
+{% for name in table_names %}
+  {% assign table = table | concat: site.data.tables[name] %}
+{% endfor %}
+
+{% include table.html %}
+
+{% assign table_names = [] %}

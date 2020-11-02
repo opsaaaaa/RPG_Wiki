@@ -1,0 +1,15 @@
+
+{% unless table %}
+  {% assign table = site.data.tables[table_name] %}
+{% endunless %}
+
+<table>
+  {% for _row in table %}
+    {% tablerow _item in _row %}
+      {{ _item }}
+    {% endtablerow %}
+  {% endfor %}
+</table>
+
+{% assign table = [] %}
+{% assign table_name = '' %}

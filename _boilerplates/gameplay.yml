@@ -1,0 +1,10 @@
+---
+
+path: gameplay
+
+header:
+  parent: 'Game Play'
+
+content: '
+
+# {{ page.title }}'

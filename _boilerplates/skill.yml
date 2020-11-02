@@ -1,0 +1,10 @@
+---
+
+path: skills
+
+header:
+  parent: Skills
+
+content: '
+
+# {{ page.title }}'
