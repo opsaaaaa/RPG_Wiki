@@ -1,13 +1,9 @@
 
-{% if table_names == null  %}
-  {% assign table_names = '' | split: ',' %}
-  {% if table_name != null %}
-    {% assign table_names = table_names | push: table_name %}
-  {% elsif table != null %}
-    {% assign table_names = table_names | push: 'table' %}
-  {% endif %}
-{% endif %}
+{% assign table_names = include.tables | split: ',' %}
 
+{% if table != null %}
+  {% assign table_names = table_names | push: 'table' %}
+{% endif %}
 
 <table>
   {% for _name in table_names %}
@@ -19,12 +15,11 @@
 
     {% for _row in _table %}
       {% tablerow _item in _row %}
-        {{ _item }}
+        {{ _item | markdownify }}
       {% endtablerow %}
     {% endfor %}
   {% endfor %}
 </table>
 
 {% assign table = null %}
-{% assign table_name = null %}
 {% assign table_names = null %}

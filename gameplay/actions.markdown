@@ -2,7 +2,7 @@
 parent: Game Play
 title: Actions
 created: '2020-11-01 10:49:42 -0700'
-nav_order: 2
+nav_order: 1
 has_toc: true
 
 ---
@@ -14,7 +14,7 @@ has_toc: true
 
 ## Check
 
-A check is roll to check if the character can preform a action, or to see how well they preform an action.
+A check is roll to check if the character can preform a action, or to see how well they preform an action. 
 
 
 The player must roll higher than the Challenge Level(**CL**) for the action to be considered a success.
@@ -26,15 +26,24 @@ The default **CL** is `10` unless the GM specifics otherwise.
 In addition to the dice the player adds modifiers to their roll.
 
 ```
-D20 + <ATTRIBUTE> + [SKILL] + [ITEM]
+{{ site.data.tables.rolls.basic_check | replace: '*', '' }}
 ```
 
-The player add one **ATTRIBUTE** applicable to their action. They may also modify their roll with an applicable **SKILL** and/or **ITEM**.
+The player add one applicable **ATTRIBUTE** from their character sheet to their roll. They may also modify their roll with an applicable **SKILL** and/or **ITEM**.
 
-Any **ITEM**, **SKILL**, or **ATTRIBUTE** that could logically be used in the action is considered applicable. However the GM gets ultimate say in what counts as applicable.
+## Applicable Rule
+
+Any **ITEM**, **SKILL**, or **ATTRIBUTE** that could logically be used in the action is considered applicable. 
+However the GM gets ultimate say in what counts as applicable.
 
 > A cooking skill would not be applicable in combat. 
 > It would be applicable when detecting ingredients in a dish.
+
+
+Some rolls will specify the attribute. For example a STRIKE requires the strength attribute be used.
+
+
+
 
 
 ## Examples

@@ -2,7 +2,7 @@
 parent: Game Play
 title: Dice
 created: '2020-11-01 10:50:45 -0700'
-nav_order: 1
+nav_order: 6
 
 combat_tables:
   - attack
@@ -15,15 +15,12 @@ combat_tables:
 # Rolls
 
 
-## checks
+{% include table.html tables='base-roll' %}
 
-{% assign table_name = 'checks' %}
-{% include table.html %}
 
 ## combat
 
 
-{% assign table_names = page.combat_tables %}
-{% include table.html %}
+{% include table.html tables='combat,attack,defence,support,chase' %}
 
 
