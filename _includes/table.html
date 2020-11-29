@@ -1,15 +1,30 @@
 
-{% unless table %}
-  {% assign table = site.data.tables[table_name] %}
-{% endunless %}
+{% if table_names == null  %}
+  {% assign table_names = '' | split: ',' %}
+  {% if table_name != null %}
+    {% assign table_names = table_names | push: table_name %}
+  {% elsif table != null %}
+    {% assign table_names = table_names | push: 'table' %}
+  {% endif %}
+{% endif %}
+
 
 <table>
-  {% for _row in table %}
-    {% tablerow _item in _row %}
-      {{ _item }}
-    {% endtablerow %}
+  {% for _name in table_names %}
+    {% if _name == 'table' %}
+      {% assign _table = site.data.tables[_name] %}
+    {% else %}
+      {% assign _table = site.data.tables[_name] %}
+    {% endif %}
+
+    {% for _row in _table %}
+      {% tablerow _item in _row %}
+        {{ _item }}
+      {% endtablerow %}
+    {% endfor %}
   {% endfor %}
 </table>
 
-{% assign table = [] %}
-{% assign table_name = '' %}
+{% assign table = null %}
+{% assign table_name = null %}
+{% assign table_names = null %}

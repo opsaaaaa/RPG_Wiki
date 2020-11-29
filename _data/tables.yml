@@ -9,9 +9,7 @@ checks:
   -
     - Attribute Check
     - D20 + ATTRIBUTE
-  - 
-    - Skill Check
-    - D20 + SKILL + ATTRIBUTE
+    - "Used when the player does not have applicable skills"
 
 attributes:
   -
@@ -45,8 +43,6 @@ variables:
     - STR + DEX + 10 
 
 
-combat_actions:
-
 defence:
   - 
     - Block
@@ -66,13 +62,13 @@ attack:
     - D20 + DEX + ARCHERY + PHENIX BOW
     - "CL for ranged cast should be modified based the range and cover or vantage points."   
 
-support:
+support: &support
   - 
     - Aid
     - D20 + INT +  + ITEM
     - Use this for healing or support type actions.
 
-chase:
+chase: &chase
   - 
     - Flee
     - D20 + DEX + SKILL + ITEM
@@ -81,6 +77,7 @@ chase:
     - Chase
     - D20 + DEX + SKILL + ITEM
     - Give chase.
+
 
 calculated:
   -
