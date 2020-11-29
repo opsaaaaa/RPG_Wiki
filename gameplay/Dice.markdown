@@ -14,15 +14,16 @@ combat_tables:
 
 # Rolls
 
-## combat
-
-{% assign tables = site.data.tables %}
-
-{% assign table_names = page.combat_tables %}
-{% include table.html %}
 
 ## checks
 
 {% assign table_name = 'checks' %}
 {% include table.html %}
+
+## combat
+
+
+{% assign table_names = page.combat_tables %}
+{% include table.html %}
+
 
