@@ -48,7 +48,8 @@ After the narration the next round is initiated.
 ## Combat Actions
 
 Combat actions are preformed during the encounter.
-Players my choose to do one action per round.
+Each character by default has one combat action per round.
+[see multiple combat actions](#multiple-combat-actions)
 
 For most combat actions you will roll a D20 and add one of the characters attributes plus a skill or item. 
 
@@ -101,7 +102,18 @@ DEFENCE = half the HP + [ARMOR ITEMS] + [Block/Dodge Roll]
 Invent new action types as they are needed. 
 Skills or items may dictate custom combat actions.
 
-### Defence Modifiers
 
+## Multiple Combat Actions
+
+
+For every `2` points in **DEX** the character gets an additional combat action.
+Items or skills may also increase or decrease the number of combat actions a character has.
+
+## Health points
+
+A characters max Health points is determined by their strength(STR).
+```
+STR + 20
+```
 
 

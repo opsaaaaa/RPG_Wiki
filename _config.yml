@@ -34,7 +34,6 @@ github_username:  opsaaaaa
 
 # just the docs settings
 theme: "just-the-docs"
-color_scheme: dark
 search_enabled: true
 
 # Footer "Edit this page on GitHub" link text
