@@ -9,9 +9,7 @@ checks:
   -
     - Attribute Check
     - D20 + ATTRIBUTE
-  - 
-    - Skill Check
-    - D20 + SKILL + ATTRIBUTE
+    - "Used when the player does not have applicable skills"
 
 attributes:
   -
@@ -45,42 +43,67 @@ variables:
     - STR + DEX + 10 
 
 
-combat_actions:
+rolls:
+  basic_check: &basic_check "**D20** + <**ATTRIBUTE**> + [**SKILL**] + [**ITEM**]"
+  basic_check: &basic_check "**D20** + <**ATTRIBUTE**> + [**SKILL**] + [**ITEM**]"
+  combat: &combat "**D20** + <**ATTRIBUTE**> + [**SKILL**] + [**ITEM**]"
+  block: &block "D20 + **STR** + SWORDSMANSHIP + SHIELD"
+  dodge: &dodge "D20 + **DEX** + ACROBATICS + MAGIC SHOES"
+  strike: &strike "D20 + **STR** + ROYAL GUARD SKILL + SPEAR"
+  cast: &cast "D20 + **DEX** + ARCHERY + PHENIX BOW"
+  aid: &aid "D20 + **INT** + BRACKIUM EMENDO + ARM BRACE"
+  flee: &flee "D20 + **DEX** + PILOT + JET PACK"
+  chase: &chase "D20 + **DEX** + RIDING + SKATEBOARD"
+  capture: &capture "D20 + **STR** + SKILL + ITEM"
+
+
+base-roll:
+  -
+    - "Base Roll"
+    - *basic_check
+    -
+
+combat:
+  -
+    - "**Combat**"
+    - *combat
+    - Base combat roll
 
 defence:
   - 
     - Block
-    - D20 + STR + SWORDSMANSHIP + SHIELD
+    - *block
     - Use when shielding against attacks. 
   - 
     - Dodge
-    - D20 + DEX + ACROBATICS + MAGIC SHOES
+    - *dodge
     - Evading attack
 attack:
   - 
     - Strike
-    - D20 + STR + ROYAL GUARD SKILL + SPEAR
+    - *strike
     - Strike can be used for any close combat attacks.
   -
     - Cast
-    - D20 + DEX + ARCHERY + PHENIX BOW
-    - "CL for ranged cast should be modified based the range and cover or vantage points."   
+    - *cast
+    - "**CL** for ranged cast should be modified based the range and cover or vantage points."   
 
-support:
+support: 
   - 
     - Aid
-    - D20 + INT +  + ITEM
+    - *aid
     - Use this for healing or support type actions.
 
-chase:
+chase: 
   - 
     - Flee
-    - D20 + DEX + SKILL + ITEM
+    - *flee
     - Flee the battle.
   - 
     - Chase
-    - D20 + DEX + SKILL + ITEM
+    - *chase
     - Give chase.
+
 
 calculated:
   -

@@ -1,15 +1,25 @@
 
-{% unless table %}
-  {% assign table = site.data.tables[table_name] %}
-{% endunless %}
+{% assign table_names = include.tables | split: ',' %}
+
+{% if table != null %}
+  {% assign table_names = table_names | push: 'table' %}
+{% endif %}
 
 <table>
-  {% for _row in table %}
-    {% tablerow _item in _row %}
-      {{ _item }}
-    {% endtablerow %}
+  {% for _name in table_names %}
+    {% if _name == 'table' %}
+      {% assign _table = site.data.tables[_name] %}
+    {% else %}
+      {% assign _table = site.data.tables[_name] %}
+    {% endif %}
+
+    {% for _row in _table %}
+      {% tablerow _item in _row %}
+        {{ _item | markdownify }}
+      {% endtablerow %}
+    {% endfor %}
   {% endfor %}
 </table>
 
-{% assign table = [] %}
-{% assign table_name = '' %}
+{% assign table = null %}
+{% assign table_names = null %}
