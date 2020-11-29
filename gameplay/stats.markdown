@@ -17,16 +17,14 @@ All characters Attributes remain constant.
 leveling can be handled through items and skills.
 
 
-{% assign table_name = 'attributes' %}
-{% include table.html %}
+{% include table.html tables='attributes' %}
 
 
 ## Variables
 
 Variables change throughout gameplay. 
 
-{% assign table_name = 'variables' %}
-{% include table.html %}
+{% include table.html tables='variables' %}
 
 
 
@@ -41,8 +39,7 @@ these skills will specify rules for doing damage.
 
 ## Calculated
 
-{% assign table_name = 'calculated' %}
-{% include table.html %}
+{% include table.html tables='calculated' %}
 
 
 

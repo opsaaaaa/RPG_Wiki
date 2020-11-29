@@ -48,12 +48,12 @@ After the narration the next round is initiated.
 ## Combat Actions
 
 Combat actions are preformed during the encounter.
-Players my choose to do one action per round.
+Each character by default has one combat action per round.
+[see multiple combat actions](#multiple-combat-actions)
 
 For most combat actions you will roll a D20 and add one of the characters attributes plus a skill or item. 
-```
-D20 + ATTRIBUTE + [SKILL] + [ITEM]
-```
+
+{% include roll.md roll='combat' %}
 
 As long as it is logical, you may use any skill, attribute, or item in combat.
 A character my even use items from the environment, like a chair, vase, or tree.
@@ -68,16 +68,16 @@ An ATTACK succeeds and does damage when it exceeds the enemies DEFENCE.
 In a Attack roll the skill and item are both optional.
 
 The DAMAGE dealt to the enemies HP is the ATTACK minus the DEFENCE
+
 ```
 ATTACK = D20 + ATTRIBUTE + [SKILL] + [ITEM]
 ```
 ```
-DAMAGE = ATtACK - DEFENCE
+DAMAGE = ATTACK - DEFENCE
 ```
 
 
-{% assign table_name = 'attack' %}
-{% include table.html %}
+{% include table.html tables='attack' %}
 
 
 ### Defence
@@ -89,23 +89,31 @@ DEFENCE = half the HP + [ARMOR ITEMS] + [Block/Dodge Roll]
 ```
 
 
-{% assign table_name = 'defence' %}
-{% include table.html %}
+{% include table.html tables='defence'%}
 
 ### Support Actions
 
-{% assign table_name = 'support' %}
-{% include table.html %}
+{% include table.html tables='support' %}
 
 ### Chase Actions
 
-{% assign table_name = 'chase' %}
-{% include table.html %}
+{% include table.html tables='chase' %}
 
 Invent new action types as they are needed. 
 Skills or items may dictate custom combat actions.
 
-### Defence Modifiers
 
+## Multiple Combat Actions
+
+
+For every `2` points in **DEX** the character gets an additional combat action.
+Items or skills may also increase or decrease the number of combat actions a character has.
+
+## Health points
+
+A characters max Health points is determined by their strength(STR).
+```
+STR + 20
+```
 
 
