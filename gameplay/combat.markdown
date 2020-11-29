@@ -34,9 +34,8 @@ Once a character has declare they cant change their mind.
 ### Combat phase
 
 In the combat phase each player rolls for their declared actions 
-and applies any resulting damage or effects.
-
-see [combat rolls]({{ page.url }}#combat-actions).
+and applies any resulting damage or effects. 
+[see combat rolls](#combat-actions).
 
 ### Narration phase
 
@@ -65,9 +64,8 @@ Stats for environmental items can be invented on the fly.
 
 An ATTACK succeeds and does damage when it exceeds the enemies DEFENCE.
 
-In a Attack roll the skill and item are both optional.
-
-The DAMAGE dealt to the enemies HP is the ATTACK minus the DEFENCE
+The DAMAGE dealt adds to the current injury level of the combatant.
+The maxim injury a character can take is `5`. The DAMAGE is the ATTACK minus the DEFENCE
 
 ```
 ATTACK = D20 + ATTRIBUTE + [SKILL] + [ITEM]
@@ -85,7 +83,7 @@ DAMAGE = ATTACK - DEFENCE
 The if the defender made a defence aiding roll (Block/Dodge) in the current round then the result can be added to the DEFENCE. 
 
 ```
-DEFENCE = half the HP + [ARMOR ITEMS] + [Block/Dodge Roll]
+DEFENCE = DEX + STR + [ARMOR ITEMS] + [Block/Dodge Roll]
 ```
 
 
@@ -106,14 +104,15 @@ Skills or items may dictate custom combat actions.
 ## Multiple Combat Actions
 
 
-For every `2` points in **DEX** the character gets an additional combat action.
+For every points in **DEX** the character gets an additional combat action.
+The additional combat actions only takes effect if it succeeded and the previous action succeeded.
+
+> Holvard has `1` **DEX**.
+> The player declares that Holvard will try to Dodge anything coming his way and then stab the goblin with his spear.
+> Holvard Dodge roll fails and the so does not roll to strike.
+
+
 Items or skills may also increase or decrease the number of combat actions a character has.
 
-## Health points
-
-A characters max Health points is determined by their strength(STR).
-```
-STR + 20
-```
 
 
