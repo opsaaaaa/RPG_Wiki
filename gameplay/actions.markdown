@@ -1,12 +1,15 @@
 ---
 parent: Game Play
-title: Character Actions
+title: Actions
 created: '2020-11-01 10:49:42 -0700'
 nav_order: 2
+has_toc: true
 
 ---
 
-# {{ page.title }}
+{% include toc.md %}
+
+# Character Actions
 
 
 ## Check
