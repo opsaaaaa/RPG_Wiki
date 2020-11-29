@@ -45,7 +45,6 @@ variables:
 
 rolls:
   basic_check: &basic_check "**D20** + <**ATTRIBUTE**> + [**SKILL**] + [**ITEM**]"
-  basic_check: &basic_check "**D20** + <**ATTRIBUTE**> + [**SKILL**] + [**ITEM**]"
   combat: &combat "**D20** + <**ATTRIBUTE**> + [**SKILL**] + [**ITEM**]"
   block: &block "D20 + **STR** + SWORDSMANSHIP + SHIELD"
   dodge: &dodge "D20 + **DEX** + ACROBATICS + MAGIC SHOES"
