@@ -65,10 +65,10 @@ Stats for environmental items can be invented on the fly.
 An ATTACK succeeds and does damage when it exceeds the enemies DEFENCE.
 
 The DAMAGE dealt adds to the current injury level of the combatant.
-The maxim injury a character can take is `5`. The DAMAGE is the ATTACK minus the DEFENCE
+The maxim injury a character can take is `5` plus **STR**. The DAMAGE is the ATTACK minus the DEFENCE
 
 ```
-ATTACK = D20 + ATTRIBUTE + [SKILL] + [ITEM]
+ATTACK = D20 + <ATTRIBUTE> + [SKILL] + [ITEM] - INJURY
 ```
 ```
 DAMAGE = ATTACK - DEFENCE
@@ -109,7 +109,7 @@ The additional combat actions only takes effect if it succeeded and the previous
 
 > Holvard has `1` **DEX**.
 > The player declares that Holvard will try to Dodge anything coming his way and then stab the goblin with his spear.
-> Holvard Dodge roll fails and the so does not roll to strike.
+> Holvard fails to dodge the goblins slash so does not roll to strike.
 
 
 Items or skills may also increase or decrease the number of combat actions a character has.
