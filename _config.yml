@@ -36,6 +36,8 @@ github_username:  opsaaaaa
 theme: "just-the-docs"
 search_enabled: true
 
+color_scheme: dark
+
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit on GitHub"
