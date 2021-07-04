@@ -1,5 +1,6 @@
 ---
 title: Horde Roleplay
+layout: default
 nav_exclude: true
 ---
 
