@@ -18,3 +18,5 @@ combat skill being any skill the GM decides can be effective in combat.
 `STR + WD * D6` in melee combat.
 `WD * D6` in ranged combat.
 
+## Advantage / Disadvantage
+Roll Multiple times and take the lowest/ highest value.
