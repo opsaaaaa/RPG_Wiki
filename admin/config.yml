@@ -17,17 +17,37 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Parent', name: "parent", widget: 'string', default: 'Game Play' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Parent', name: "parent", widget: 'string', default: 'Game Play' }
+      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
+      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
+  
   - name: 'skills'
     label: 'Skills'
-    folder: 'gameplay/'
+    folder: 'skills/'
     create: true
     slug: "{{slug}}"
     editor:
       preview: false
     fields:
       - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Parent', name: "parent", widget: 'string', default: 'Skills' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Parent', name: "parent", widget: 'string', default: 'Skills' }
+      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
+      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
+
+
+  - name: 'notes'
+    label: 'Notes'
+    folder: 'notes/'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: "title", widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Parent', name: "parent", widget: 'string', default: 'Notes' }
+      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
+      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
 
