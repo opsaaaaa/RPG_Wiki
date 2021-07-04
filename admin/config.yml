@@ -9,17 +9,25 @@ public_folder: "/assets/uploads"
 site_url: https://roleplay.tinkerswan.com
 collections:
   - name: 'gameplay'
-    label: 'Edit Game Play'
+    label: 'Game Play'
     folder: 'gameplay/'
-
     create: true
-
     slug: "{{slug}}"
-
     editor:
       preview: false
-    
     fields:
       - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Parent', name: "parent", widget: 'string' }
+      - { label: 'Parent', name: "parent", widget: 'string', default: 'Game Play' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'skills'
+    label: 'Skills'
+    folder: 'gameplay/'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: "title", widget: 'string' }
+      - { label: 'Parent', name: "parent", widget: 'string', default: 'Skills' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
