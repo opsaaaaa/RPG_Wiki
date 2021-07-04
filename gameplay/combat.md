@@ -1,8 +1,9 @@
 ---
-parent: Game Play
 title: Combat
-created: '2020-11-01 10:49:38 -0700'
-nav_order: 3 
+parent: Game Play
+created: 2020-11-01 10:49:38 -0700
+nav_order: 3
+has_toc: false
 ---
 
 # {{ page.title }}
@@ -23,13 +24,13 @@ Each round of the encounter has three phases.
 
 In the declaration phase each player declares their characters actions. 
 
-The characters perceptions (PER) dictates the declaration order.
-The character with the lowest PER declares first. 
-The character with the highest PER declare last.
+The characters initiative roll **DEX + D20** dictates the declaration order.
+The character with the lowest initiative declare first. 
+The character with the highest initiative declare last.
 The characters who declare later have an advantage, they act with knowledge of what everyone else will be doing.
 
-
 Once a character has declare they cant change their mind.
+
 
 ### Combat phase
 
@@ -42,15 +43,17 @@ and applies any resulting damage or effects.
 In the narration phase the GM untangles and recounts the epic events of the round.
 After the narration the next round is initiated.
 
+The GM may involve the players in the narration by prompt each player to narrate their characters actions for hat round. 
+
 
 
 ## Combat Actions
 
 Combat actions are preformed during the encounter.
-Each character by default has one combat action per round.
+Each character has two combat action per turn.
 [see multiple combat actions](#multiple-combat-actions)
 
-For most combat actions you will roll a D20 and add one of the characters attributes plus a skill or item. 
+For most combat actions you will roll a D20 and add one of the characters attributes or skills. 
 
 {% include roll.md roll='combat' %}
 
@@ -59,32 +62,33 @@ A character my even use items from the environment, like a chair, vase, or tree.
 Stats for environmental items can be invented on the fly.
 
 
-### Attack
+### Attack Rolls
 
 
-An ATTACK succeeds and does damage when it exceeds the enemies DEFENCE.
+An Attack succeeds and does damage when it exceeds the enemies Counter Roll.
+When the target has not declare any counters that turn then the counter roll must exceed their targets **DEX**
 
-The DAMAGE dealt adds to the current injury level of the combatant.
-The maxim injury a character can take is `5` plus **STR**. The DAMAGE is the ATTACK minus the DEFENCE
+they roll the hit check as **D20 + Combat Skill**. Combat skill being any skill the GM decides can be effective in combat.
 
-```
-ATTACK = D20 + <ATTRIBUTE> + [SKILL] + [ITEM] - INJURY
-```
-```
-DAMAGE = ATTACK - DEFENCE
-```
 
+After the character succeeds the hit check they roll for their damage. In melee combat they roll a D6 for each point in Strength they have and one for each point of Weapon Damage their weapon has, **STR + WD x D6**. 
+
+In ranged combat you roll **WD x D6**
+
+The damage is reduced by the targets armor. Armor being **STR**, and any armor items or class/race bonuses.
+
+The damage dealt adds to the current injury level of the combatant. Once the injury level exceeds the combatants health they become incapacitated. 
+A incapacitated character does not have any actions. They roll **D20** a saving throw each round. If a character fails their saving throw three times then they die.
 
 {% include table.html tables='attack' %}
 
 
-### Defence
+### Counters
 
-The if the defender made a defence aiding roll (Block/Dodge) in the current round then the result can be added to the DEFENCE. 
+Players can use a action to counter attacks.
+An enemy's attack only does damage if it exceeds the defenders counter.
 
-```
-DEFENCE = DEX + STR + [ARMOR ITEMS] + [Block/Dodge Roll]
-```
+The if the defender made a counter roll (Block/Dodge) in the current round then any enemy attacks must exceed the defenders counter roll.
 
 
 {% include table.html tables='defence'%}
@@ -103,16 +107,7 @@ Skills or items may dictate custom combat actions.
 
 ## Multiple Combat Actions
 
-
-For every points in **DEX** the character gets an additional combat action.
-The additional combat actions only takes effect if it succeeded and the previous action succeeded.
-
-> Holvard has `1` **DEX**.
-> The player declares that Holvard will try to Dodge anything coming his way and then stab the goblin with his spear.
-> Holvard fails to dodge the goblins slash so does not roll to strike.
-
-
-Items or skills may also increase or decrease the number of combat actions a character has.
+If a players initiative roll exceeds **20** then the character gets a additional turn each round. The initiative of thier second turn is the amount they exceeded 20.
 
 
 
