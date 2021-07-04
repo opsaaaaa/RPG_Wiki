@@ -31,17 +31,12 @@ attributes:
 variables:
   - 
     - INJ
-    - Injury Level
+    -
+    - 'The current **Injury Level** of a character.'
   - 
-    - AC
-    - Armor Class
-  - 
-    - CP
-    - Coin Points
-  -
-    - Max HP 
-    - STR + DEX + 10 
-
+    - COIN
+    -
+    - 'The level of wealth your character has access to.'
 
 rolls:
   basic_check: &basic_check "**D20** + <**ATTRIBUTE**> + [**SKILL**] + [**ITEM**]"
@@ -105,17 +100,25 @@ chase:
 
 
 calculated:
-  -
-    - Damage
-    - 
-  -
-    - DF, Defence
-    - STR 
-  -
-    - Attack
   - 
-    - INT, initiative
-    - PER + DEX
+    - MAX INJ
+    - "5 + **STR**"
+    - '**Maxim injury** a character can take'
+  -
+    - DAMAGE
+    - ATTACK - DEFENCE 
+    - The damage a player takes from a combat roll.
+  -
+    - DF, DEFENCE
+    - DEX + STR + [ARMOR] + [Block/Dodge Roll]
+  - 
+    - AC, ARMOR
+    - '[ARMOR ITEMS] + [ARMOR AID]'
+    - 'Any armor items being worn plus any effects from skills or aid.
+      Cover like rocks or trees may ne included in'
+  -
+    - ATTACK
+    - 'D20 + ATTRIBUTE + [SKILL] + [ITEM] - INJURY'
 
 acronyms:
   -
