@@ -1,8 +1,12 @@
 ---
-id: hitcheck
-
 title: Hit Check
 clipping: "D20 + Combat Skill"
+
+tags:
+- D20
+- hit
+- encounter
+- combat skill
 
 notes: 
 - Check to see if a character hits their target.
