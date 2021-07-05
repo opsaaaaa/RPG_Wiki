@@ -55,7 +55,8 @@ Each character has two combat action per turn.
 
 For most combat actions you will roll a D20 and add one of the characters attributes or skills. 
 
-{% include roll.md roll='combat' %}
+
+{% clip Hit Check %}
 
 As long as it is logical, you may use any skill, attribute, or item in combat.
 A character my even use items from the environment, like a chair, vase, or tree.

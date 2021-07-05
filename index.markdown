@@ -6,7 +6,23 @@ nav_exclude: true
 
 
 
-{% include clipping.html clip="hitcheck" %}
+
+
+{% clip Melee Damage %}
+
+{% clip Ranged Damage %}
+
+{% clip Hit Check %}
+
+{% include clip.html clip='Melee Damage' %} stuff and things
+
+
+{% for c in site.clippings %}
+
+{{ c.output }}
+
+{% endfor %}
+
 
 
 # {{ page.title }}

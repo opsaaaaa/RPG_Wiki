@@ -57,7 +57,7 @@ collections:
   tables:
     output: false
   clippings:
-    output: false 
+    output: true
 
 defaults:
   - scope:
@@ -71,7 +71,7 @@ defaults:
   - scope:
       path: "_clippings/"
     values:
-      layout: "none"
+      layout: "clip"
 
 
 exclude:

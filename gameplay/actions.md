@@ -25,7 +25,8 @@ The default **CL** is `10` unless the GM specifics otherwise.
 
 In addition to the dice the player adds modifiers to their roll.
 
-{% include roll.md roll='basic_check' %}
+
+{% clip Basic Check %}
 
 The player add one applicable **ATTRIBUTE** from their character sheet to their roll. They may also modify their roll with an applicable **SKILL** and/or **ITEM**.
 

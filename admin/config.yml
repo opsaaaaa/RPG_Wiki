@@ -51,3 +51,14 @@ collections:
       - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
       - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
 
+  - name: 'clippings'
+    label: 'Clippings'
+    folder: '_clippings/'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Clipping', name: 'clipping', widget: 'string' }
+      - { label: 'Notes', name: 'notes', widget: 'list', max: 5, min: 1, default: ["notes..."]}
