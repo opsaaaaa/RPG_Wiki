@@ -66,6 +66,8 @@ collections:
         widget: 'list'
         max: 5
         min: 1
+        summary: '{{fields.note}}'
+        collapsed: true
         default: 
           - "note..."
         field: {label: Note, name: note, widget: string}
