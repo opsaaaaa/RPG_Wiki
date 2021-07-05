@@ -78,10 +78,11 @@ For ranged weapons you roll {% clip Ranged Damage %}
 
 The damage is reduced by the targets armor. Armor being **STR**, and any armor items or class/race bonuses.
 
-The damage dealt adds to the current injury level of the combatant. Once the injury level exceeds the combatants health they become incapacitated. 
-A incapacitated character does not have any actions. They roll **D20** a saving throw each round. If a character fails their saving throw three times then they die.
-
-The health points is the {% clip Health %}
+The damage dealt adds to the current injury level of the combatant. 
+Once the injury level exceeds the combatants health( {% clip Health %} ) they become incapacitated. 
+A incapacitated character does not have any actions. 
+They roll **D20** as saving throw each round. 
+If a character fails their saving throw three times then they die.
 
 {% include table.html tables='attack' %}
 
