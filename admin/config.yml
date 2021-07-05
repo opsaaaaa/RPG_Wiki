@@ -5,7 +5,7 @@ backend:
   branch: netlify # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 public_folder: "/assets/uploads"
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 site_url: https://roleplay.tinkerswan.com
 collections:
   - name: 'gameplay'
