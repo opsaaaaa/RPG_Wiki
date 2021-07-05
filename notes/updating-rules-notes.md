@@ -27,3 +27,7 @@ The damage is reduced by the targets armor. Armor being STR, and any armor items
 
 ## Advantage / Disadvantage
 Roll Multiple times and take the lowest/ highest value.
+
+## Multiple Actions
+Characters have two actions per turn. if they do the same action twice. like punching the same enemy twice. then its acts the same as and advantage.
+SO you role the **D20** twice and use the better number.
