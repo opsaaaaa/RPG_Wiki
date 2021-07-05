@@ -1,6 +1,6 @@
 ---
-title: Game Play
-nav_order: 2
+title: Content
+nav_order: 3
 has_children: true
 ---
 

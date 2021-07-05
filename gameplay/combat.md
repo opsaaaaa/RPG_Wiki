@@ -9,18 +9,18 @@ has_toc: false
 # {{ page.title }}
 
 
-## The Encounter
+# The Encounter
 
 A combat encounter is initiated when someone makes a declaration to attack. The combat encounter is over when nobody declares to attack or when the GM says its over.
 
 Spells items or skills may alter the flow of combat rounds.
 
 Each round of the encounter has three phases.
-1. Declaration
-2. Combat
-3. Narration
+1. [Declaration](#declaration-phase)
+2. [Combat](#combat-phase)
+3. [Narration](#narration-phase)
 
-### Declaration phase
+## Declaration phase
 
 In the declaration phase each player declares their characters actions. 
 
@@ -32,13 +32,13 @@ The characters who declare later have an advantage, they act with knowledge of w
 Once a character has declare they cant change their mind.
 
 
-### Combat phase
+## Combat phase
 
 In the combat phase each player rolls for their declared actions 
 and applies any resulting damage or effects. 
 [see combat rolls](#combat-actions).
 
-### Narration phase
+## Narration phase
 
 In the narration phase the GM untangles and recounts the epic events of the round.
 After the narration the next round is initiated.
@@ -47,13 +47,13 @@ The GM may involve the players in the narration by prompt each player to narrate
 
 
 
-## Combat Actions
+# Combat Actions
 
 Combat actions are preformed during the encounter.
 Each character has two combat action per turn.
 [see multiple combat actions](#multiple-combat-actions)
 
-For most combat actions you will roll a D20 and add one of the characters attributes or skills. 
+For most combat actions you will roll a D20 and add one of the characters skills. 
 
 
 {% clip Hit Check %}
@@ -63,23 +63,25 @@ A character my even use items from the environment, like a chair, vase, or tree.
 Stats for environmental items can be invented on the fly.
 
 
-### Attack Rolls
+## Attack Rolls
 
 
 An Attack succeeds and does damage when it exceeds the enemies Counter Roll.
 When the target has not declare any counters that turn then the counter roll must exceed their targets **DEX**
 
-they roll the hit check as **D20 + Combat Skill**. Combat skill being any skill the GM decides can be effective in combat.
+they roll the hit check as {% clip Hit Check %}. Combat skill being any skill the GM decides can be effective in combat.
 
 
-After the character succeeds the hit check they roll for their damage. In melee combat they roll a D6 for each point in Strength they have and one for each point of Weapon Damage their weapon has, **STR + WD x D6**. 
+After the character succeeds the hit check they roll for their damage. In melee combat they roll a D6 for each point in Strength they have and one for each point of Weapon Damage their weapon has, {% clip Melee Damage %}.
 
-In ranged combat you roll **WD x D6**
+For ranged weapons you roll {% clip Ranged Damage %}
 
 The damage is reduced by the targets armor. Armor being **STR**, and any armor items or class/race bonuses.
 
 The damage dealt adds to the current injury level of the combatant. Once the injury level exceeds the combatants health they become incapacitated. 
 A incapacitated character does not have any actions. They roll **D20** a saving throw each round. If a character fails their saving throw three times then they die.
+
+The health points is the {% clip Health %}
 
 {% include table.html tables='attack' %}
 

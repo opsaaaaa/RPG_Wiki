@@ -1,7 +1,8 @@
 ---
-title: Skills
-nav_order: 100
+title: Addons
+nav_order: 4
 has_children: true
 ---
 
 # {{ page.title }}
+

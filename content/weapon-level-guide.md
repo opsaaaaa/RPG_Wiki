@@ -1,7 +1,7 @@
 ---
-title: Weapon Level Guide
-parent: Game Play
-nav_order: 1
+title: Example Weapons
+parent: Content
+nav_order: 2
 has_toc: true
 ---
 {{ page.title }}
