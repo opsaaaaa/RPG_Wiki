@@ -1,8 +1,9 @@
 ---
 title: Skill Check
-clipping: "D20 + Skill"
+clipping: "D20 + <Skill>"
 
 tags:
+- roll
 - D20
 - skill
 

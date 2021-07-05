@@ -1,8 +1,9 @@
 ---
 title: Attribute Check
-clipping: "D20 + Attribute"
+clipping: "D20 + <Attribute>"
 
-tags: 
+tags:
+- roll
 - D20
 - attribute
 

@@ -3,6 +3,7 @@ title: Melee Damage
 clipping: "STR + WD x D6"
 
 tags:
+- roll
 - STR
 - WD
 - D6

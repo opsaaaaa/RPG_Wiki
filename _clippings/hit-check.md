@@ -1,8 +1,9 @@
 ---
 title: Hit Check
-clipping: "D20 + Combat Skill"
+clipping: "D20 + <Combat Skill>"
 
 tags:
+- roll
 - D20
 - hit
 - encounter

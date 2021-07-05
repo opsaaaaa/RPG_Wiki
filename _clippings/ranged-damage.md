@@ -3,6 +3,7 @@ title: Ranged Damage
 clipping: "WD x D6"
 
 tags:
+- roll
 - WD
 - D6
 - encounter
@@ -11,5 +12,5 @@ tags:
 
 notes:
 - How much damage a ranged attack does.
-- WD stands for Weapon damage. 
+- WD stands for the Weapon Damage of the weapon used in the attack. 
 ---

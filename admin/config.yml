@@ -62,4 +62,4 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Clipping', name: 'clipping', widget: 'string' }
       - { label: 'Notes', name: 'notes', widget: 'list', max: 5, min: 1, default: ["notes..."]}
-      - { label: 'Tags', name: 'tags', widget: 'list', max: 5, min: 1, default: ["D20"]}
+      - { label: 'Tags', name: 'tags', widget: 'list', max: 5, min: 1, default: ["roll"]}
