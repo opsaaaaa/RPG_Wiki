@@ -61,11 +61,20 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Clipping', name: 'clipping', widget: 'string' }
-      - { label: 'Notes', name: 'notes', widget: 'list', max: 5, min: 1, default: ["notes..."]}
-      - label: 'Tags'
-        name: 'tags'
+      - label: Notes
+        name: 'notes'
         widget: 'list'
         max: 5
         min: 1
-        default: ["roll"]
+        default: 
+          - "note..."
         field: {label: Note, name: note, widget: string}
+        allow_add: true
+      
+      - label: Tags
+        name: tags
+        widget: 'list'
+        max: 5
+        min: 1
+        default: 
+          - roll
