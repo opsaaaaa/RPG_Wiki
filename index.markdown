@@ -5,38 +5,26 @@ nav_exclude: true
 ---
 
 
-
-
-
-{% clip Melee Damage %}
-
-{% clip Ranged Damage %}
-
-{% clip Hit Check %}
-
-{% include clip.html clip='Melee Damage' %} stuff and things
-
-
-{% for c in site.clippings %}
-
-{{ c.output }}
-
-{% endfor %}
-
-
-
 # {{ page.title }}
 
 
 
 Horde roleplay is an experimental table top roleplay system.
-Its partly inspired by "pathfinder" and "cogent roleplay".
+Its partly inspired by Pathfinder, Cogent Roleplay, and D&D.
 
-The idea is to create a roleplay system that improves the gameplay experience and learns from both.
-
-
-{% assign the_goal_page = site.pages | where: 'title', 'The Goals' %}
-
-{{ the_goal_page }}
+The idea is to create a roleplay system that improves the gameplay experience.
 
 
+# The Goals
+
+
+We want players to spend less time acting as accountant and more time roleplaying.
+
+We want to keep combat encounters short and engaging.
+Reduce the amount of time players are doing math or looking up rules.
+
+We would like to reduce and simplify the variables players are interacting with. 
+And provide Character stats that are satisfying to use.
+
+We would like this system to be both flexible and convenient.
+GMs and players should be able to adapt and invent content easily.
