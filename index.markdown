@@ -5,7 +5,13 @@ nav_exclude: true
 ---
 
 
+
+{% include clipping.html clip="hitcheck" %}
+
+
 # {{ page.title }}
+
+
 
 Horde roleplay is an experimental table top roleplay system.
 Its partly inspired by "pathfinder" and "cogent roleplay".

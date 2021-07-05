@@ -53,7 +53,11 @@ aux_links:
 plugins:
   - jekyll-feed
 
-
+collections:
+  tables:
+    output: false
+  clippings:
+    output: false 
 
 defaults:
   - scope:
@@ -62,6 +66,10 @@ defaults:
       layout: "default"
   - scope:
       path: "assets"
+    values:
+      layout: "none"
+  - scope:
+      path: "_clippings/"
     values:
       layout: "none"
 
