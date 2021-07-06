@@ -30,7 +30,7 @@ The characters who declare later have an advantage, they act with knowledge of w
 
 Once a character has declare they cant change their mind.\
 \
-{% include clippings.html tags='Initiative' %}
+{% include clippings.html tags='initiative' %}
 
 ## Combat phase
 
