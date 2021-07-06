@@ -2,6 +2,7 @@
 title: Spells & Magic
 parent: Addons
 created: 2020-11-01 10:49:38 -0700
+categories: ['addons']
 nav_order: 3
 has_toc: true
 ---

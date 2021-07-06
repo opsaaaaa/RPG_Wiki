@@ -53,6 +53,8 @@ aux_links:
 plugins:
   - jekyll-feed
 
+permalink: /:categories/:title
+
 collections:
   tables:
     output: false
@@ -61,13 +63,21 @@ collections:
 
 defaults:
   - scope:
-      path: ""
+      path: "pages"
     values:
       layout: "default"
+      permalink: /:basename/
   - scope:
-      path: "assets"
+      path: "articles"
     values:
-      layout: "none"
+      layout: "default"
+      permalink: /articles/:basename
+  - scope:
+      path: "notes"
+    values:
+      layout: "default"
+      permalink: /notes/:basename
+      parent: Notes
   - scope:
       path: "_clippings/"
     values:

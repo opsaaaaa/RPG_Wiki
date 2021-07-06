@@ -1,6 +1,7 @@
 ---
 title: Example Weapons
 parent: Content
+categories: ['content']
 nav_order: 2
 has_toc: true
 ---

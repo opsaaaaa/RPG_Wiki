@@ -1,5 +1,6 @@
 ---
 parent: Game Play
+categories: ['gameplay']
 title: Character Sheets
 created: '2020-11-01 10:53:48 -0700'
 nav_order: 1

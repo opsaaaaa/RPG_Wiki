@@ -1,6 +1,7 @@
 ---
 parent: Game Play
 title: Actions
+permalink: /gameplay/actions
 created: '2020-11-01 10:49:42 -0700'
 nav_order: 1
 has_toc: true

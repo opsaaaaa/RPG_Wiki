@@ -9,11 +9,13 @@ public_folder: "/assets/uploads"
 site_url: https://roleplay.tinkerswan.com
 
 collections:
-  - name: 'gameplay'
-    label: 'Game Play'
-    folder: 'gameplay/'
+
+  - name: pages
+    label: 'Pages'
+    folder: 'pages/'
     create: true
     slug: "{{slug}}"
+    summery: "{{title}} . {{month}}-{{year}}"
     editor:
       preview: false
     fields: 
@@ -21,42 +23,55 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
       - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
-      - { label: 'Parent', name: "parent", widget: 'string', default: 'Game Play' }
-  
-  - name: 'content'
-    label: 'Content'
-    folder: 'content/'
+      
+      - label: 'Has Articles'
+        name: "has_children"
+        widget: 'boolean'
+        default: false
+      
+      - label: 'Permalink'
+        name: "permalink"
+        widget: 'string'
+        default: '/:basename/'
+        required: false
+
+  - name: articles
+    label: 'Articles'
+    folder: 'articles/'
     create: true
     slug: "{{slug}}"
+    summery: "{{title}} | {{field.parent}} . {{month}}-{{year}}"
     editor:
       preview: false
-    fields:
+    fields: 
       - { label: 'Title', name: "title", widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
       - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
-      - { label: 'Parent', name: "parent", widget: 'string', default: 'Content' }
+      
+      - label: 'Parent'
+        name: "parent"
+        widget: 'relation'
+        required: true
+        collection: pages
+        value_field: title
+        search_fields: [title]
 
-  - name: 'addons'
-    label: 'Addons'
-    folder: 'addons/'
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
-      - { label: 'Parent', name: "parent", widget: 'string', default: 'Addons' }
+      
+      - label: 'Permalink'
+        name: "permalink"
+        widget: 'string'
+        default: 'Game Play'
+        required: false
 
 
-  - name: 'notes'
+
+  - name: notes
     label: 'Notes'
     folder: 'notes/'
     create: true
     slug: "{{slug}}"
+    summery: "{{title}} . {{month}}-{{year}}"
     editor:
       preview: false
     fields:
@@ -64,12 +79,12 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
       - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
-      - { label: 'Parent', name: "parent", widget: 'string', default: 'Notes' }
 
-  - name: 'clippings'
+  - name: clippings
     label: 'Clippings'
     folder: '_clippings/'
     create: true
+    summery: "{{title}} | {{field.clipping}} . {{month}}-{{year}}"
     slug: "{{slug}}"
     editor:
       preview: false
