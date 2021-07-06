@@ -23,7 +23,7 @@ collections:
     editor:
       preview: false
     fields: 
-      <<: *page_fields
+      - *page_fields
       - { label: 'Parent', name: "parent", widget: 'string', default: 'Game Play' }
   
   - name: 'content'
@@ -34,11 +34,19 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Parent', name: "parent", widget: 'string', default: 'Skills' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
+      - *page_fields
+      - { label: 'Parent', name: "parent", widget: 'string', default: 'Content' }
+
+  - name: 'addons'
+    label: 'Addons'
+    folder: 'addons/'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - *page_fields
+      - { label: 'Parent', name: "parent", widget: 'string', default: 'Addons' }
 
 
   - name: 'notes'
@@ -49,11 +57,8 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - *page_fields
       - { label: 'Parent', name: "parent", widget: 'string', default: 'Notes' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
 
   - name: 'clippings'
     label: 'Clippings'
