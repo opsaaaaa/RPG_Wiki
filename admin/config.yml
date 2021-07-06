@@ -20,14 +20,15 @@ collections:
       preview: false
     fields: 
       - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
       
       - label: 'Has Articles'
         name: "has_children"
         widget: 'boolean'
         default: false
+      
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
+      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
       
       - label: 'Permalink'
         name: "permalink"
@@ -45,9 +46,6 @@ collections:
       preview: false
     fields: 
       - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
       
       - label: 'Parent'
         name: "parent"
@@ -56,7 +54,10 @@ collections:
         collection: pages
         value_field: title
         search_fields: [title]
-
+      
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
+      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
       
       - label: 'Permalink'
         name: "permalink"
