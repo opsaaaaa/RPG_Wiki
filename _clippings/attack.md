@@ -1,8 +1,9 @@
 ---
-title: Hit Check
+title: Attack
 clipping: "D20 + <Combat Skill>"
 
 tags:
+- attack
 - roll
 - D20
 - hit

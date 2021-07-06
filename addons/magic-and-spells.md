@@ -40,7 +40,7 @@ However they require next to no mana.
 
 In combat the attack type spells, like a fire balls, 
 act like any other ranged weapon. 
-{% clip Hit Check Magic %}
+{% clip Attack Magic %}
 In this case the combat skill is your magic skill. 
 
 You also determining the damage the same way.

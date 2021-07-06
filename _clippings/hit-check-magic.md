@@ -1,5 +1,5 @@
 ---
-title: Hit Check Magic
+title: Attack Magic
 clipping: "D20 + Magic Skill"
 
 tags:
@@ -8,5 +8,5 @@ tags:
 - magic
 
 notes: 
-- Check to see if a character hits their target.
+- Check to see if a character hits their target
 ---

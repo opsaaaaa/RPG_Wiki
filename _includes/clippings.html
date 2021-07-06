@@ -1,0 +1,20 @@
+
+{% assign _clippings = site.clippings %}
+{% assign filter_tags = include.tags | split: ',' %}
+
+{% for tag in filter_tags %}
+  {% capture _filter %}item.tags contains '{{ tag }}'{% endcapture %}
+  {% assign _clippings = _clippings | where_exp: 'item', _filter %}
+{% endfor %}
+
+<table>
+  {% for clip in _clippings %}
+    <tr>
+      <td>{{ clip.title }}</td>
+      <td>{{ clip.clipping | escape }}</td>
+      <td>
+        {{ clip.notes | join: '. ' }}.
+      </td>
+    </tr>
+  {% endfor %}
+</table>

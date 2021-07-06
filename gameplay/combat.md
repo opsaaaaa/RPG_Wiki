@@ -56,7 +56,7 @@ Each character has two combat action per turn.
 For most combat actions you will roll a D20 and add one of the characters skills. 
 
 
-{% clip Hit Check %}
+{% clip Attack %}
 
 As long as it is logical, you may use any skill, attribute, or item in combat.
 A character my even use items from the environment, like a chair, vase, or tree.
@@ -69,14 +69,32 @@ Stats for environmental items can be invented on the fly.
 An Attack succeeds and does damage when it exceeds the enemies Counter Roll.
 When the target has not declare any counters that turn then the counter roll must exceed their targets **DEX**
 
-they roll the hit check as {% clip Hit Check %}. Combat skill being any skill the GM decides can be effective in combat.
+they roll the attack check as {% clip Attack %}. Combat skill being any skill the GM decides can be effective in combat.
 
 
-After the character succeeds the hit check they roll for their damage. In melee combat they roll a D6 for each point in Strength they have and one for each point of Weapon Damage their weapon has, {% clip Melee Damage %}.
+After the character succeeds the attack check, then they roll for their damage. In melee combat they roll a D6 for each point in Strength they have and one for each point of Weapon Damage their weapon has, {% clip Melee Damage %}.
 
 For ranged weapons you roll {% clip Ranged Damage %}
 
 The damage is reduced by the targets armor. Armor being **STR**, and any armor items or class/race bonuses.
+
+
+
+{% include clippings.html tags='attack' %}
+
+## Defence Rolls
+
+Players can use a action to defend themselves.
+An enemy's attack only does damage if it exceeds the defenders defence roll.
+
+The if the defender made a defence roll (Block/Dodge) in the current round then any enemy attacks must exceed the defenders roll to do damage.
+
+A character can choose to use their action to defend a comrade.
+If multiple defence rolls are made to protect the same character then the highest roll should be used.
+
+{% include clippings.html tags='defence,roll' %}
+
+## Health and Death
 
 The damage dealt adds to the current injury level of the combatant. 
 Once the injury level exceeds the combatants health( {% clip Health %} ) they become incapacitated. 
@@ -84,18 +102,9 @@ A incapacitated character does not have any actions.
 They roll **D20** as saving throw each round. 
 If a character fails their saving throw three times then they die.
 
-{% include table.html tables='attack' %}
+{% include clippings.html tags='defence,stat' %}
 
 
-### Counters
-
-Players can use a action to counter attacks.
-An enemy's attack only does damage if it exceeds the defenders counter.
-
-The if the defender made a counter roll (Block/Dodge) in the current round then any enemy attacks must exceed the defenders counter roll.
-
-
-{% include table.html tables='defence'%}
 
 ### Support Actions
 

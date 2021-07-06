@@ -8,5 +8,5 @@ tags:
 - skill
 
 notes: 
-- Check to see if a action succeeds or fails.
+- Check to see if a action succeeds or fails
 ---

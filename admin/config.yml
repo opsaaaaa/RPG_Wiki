@@ -5,8 +5,15 @@ backend:
   branch: netlify # Branch to update (optional; defaults to master)
 media_folder: 'assets/uploads'
 public_folder: "/assets/uploads"
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 site_url: https://roleplay.tinkerswan.com
+
+_page_fields: &page_fields
+  - { label: 'Title', name: "title", widget: 'string' }
+  - { label: 'Body', name: 'body', widget: 'markdown' }
+  - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
+  - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
+
 collections:
   - name: 'gameplay'
     label: 'Game Play'
@@ -15,16 +22,13 @@ collections:
     slug: "{{slug}}"
     editor:
       preview: false
-    fields:
-      - { label: 'Title', name: "title", widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+    fields: 
+      <<: *page_fields
       - { label: 'Parent', name: "parent", widget: 'string', default: 'Game Play' }
-      - { label: 'Nav Order', name: "nav_order", widget: 'number', default: 1, value_type: 'int' }
-      - { label: 'Table of Contents', name: "has_toc", widget: 'boolean', default: true }
   
-  - name: 'skills'
-    label: 'Skills'
-    folder: 'skills/'
+  - name: 'content'
+    label: 'Content'
+    folder: 'content/'
     create: true
     slug: "{{slug}}"
     editor:
