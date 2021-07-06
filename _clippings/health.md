@@ -5,6 +5,7 @@ notes:
   - The characters total health points
   - The max damage they can take
 tags:
+  - health
   - defence
   - stat
   - STR

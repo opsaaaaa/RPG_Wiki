@@ -5,6 +5,7 @@ notes:
   - A characters Armor reduces the damage taken from successful attacks.
 tags:
   - stat
+  - health
   - defence
   - STR
   - Armor Items

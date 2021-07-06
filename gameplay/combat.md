@@ -66,8 +66,8 @@ Stats for environmental items can be invented on the fly.
 ## Attack Rolls
 
 
-An Attack succeeds and does damage when it exceeds the enemies Counter Roll.
-When the target has not declare any counters that turn then the counter roll must exceed their targets **DEX**
+An Attack succeeds and does damage when it exceeds the enemies [Defence Roll](#defence-rolls).
+When the target has not declare any defence rolls that turn then the Attack Roll must exceed their targets **DEX**
 
 they roll the attack check as {% clip Attack %}. Combat skill being any skill the GM decides can be effective in combat.
 
@@ -96,21 +96,26 @@ If multiple defence rolls are made to protect the same character then the highes
 
 ## Health and Death
 
-The damage dealt adds to the current injury level of the combatant. 
-Once the injury level exceeds the combatants health( {% clip Health %} ) they become incapacitated. 
+The damage dealt adds to the current **Injury** level of the combatant. 
+Once the **Injury** exceeds the combatants **Health** they become incapacitated. 
 A incapacitated character does not have any actions. 
 They roll **D20** as saving throw each round. 
 If a character fails their saving throw three times then they die.
 
-{% include clippings.html tags='defence,stat' %}
+To save a incapacitated character, a comrade must provide fist aid.
+As first aid can only go so far, 
+a character must seek out other methods of recovering health after that.
+
+
+Characters may recover health by sleeping, magic/ potions, medical care.
+
+The amount of health a player recovers from sleep is determined with a **Sleep** roll. 
+
+{% include clippings.html tags='health' %}
 
 
 
-### Support Actions
-
-{% include table.html tables='support' %}
-
-### Chase Actions
+## Chases
 
 {% include table.html tables='chase' %}
 

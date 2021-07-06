@@ -11,6 +11,6 @@ tags:
 - combat skill
 
 notes: 
-- Check to see if a character hits their target.
-- Combat Skill being any skill the GM decides can be effective in combat.
+- Check to see if a character hits their target
+- Combat Skill being any skill the GM decides can be effective in combat
 ---
