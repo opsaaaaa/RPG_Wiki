@@ -6,9 +6,7 @@ created: 2020-11-01 10:49:38 -0700
 nav_order: 3
 has_toc: false
 ---
-
 # {{ page.title }}
-
 
 # The Encounter
 
@@ -17,6 +15,7 @@ A combat encounter is initiated when someone makes a declaration to attack. The 
 Spells items or skills may alter the flow of combat rounds.
 
 Each round of the encounter has three phases.
+
 1. [Declaration](#declaration-phase)
 2. [Combat](#combat-phase)
 3. [Narration](#narration-phase)
@@ -25,13 +24,14 @@ Each round of the encounter has three phases.
 
 In the declaration phase each player declares their characters actions. 
 
-The characters initiative roll **DEX + D20** dictates the declaration order.
+The characters initiative roll {% clip Initiative %} dictates the declaration order.
 The character with the lowest initiative declare first. 
 The character with the highest initiative declare last.
 The characters who declare later have an advantage, they act with knowledge of what everyone else will be doing.
 
-Once a character has declare they cant change their mind.
-
+Once a character has declare they cant change their mind.\
+\
+{% include clippings.html tags='initiative' %}
 
 ## Combat phase
 
@@ -46,8 +46,6 @@ After the narration the next round is initiated.
 
 The GM may involve the players in the narration by prompt each player to narrate their characters actions for hat round. 
 
-
-
 # Combat Actions
 
 Combat actions are preformed during the encounter.
@@ -56,30 +54,24 @@ Each character has two combat action per turn.
 
 For most combat actions you will roll a D20 and add one of the characters skills. 
 
-
 {% clip Attack %}
 
 As long as it is logical, you may use any skill, attribute, or item in combat.
 A character my even use items from the environment, like a chair, vase, or tree.
 Stats for environmental items can be invented on the fly.
 
-
 ## Attack Rolls
-
 
 An Attack succeeds and does damage when it exceeds the enemies [Defence Roll](#defence-rolls).
 When the target has not declare any defence rolls that turn then the Attack Roll must exceed their targets **DEX**
 
 they roll the attack check as {% clip Attack %}. Combat skill being any skill the GM decides can be effective in combat.
 
-
 After the character succeeds the attack check, then they roll for their damage. In melee combat they roll a D6 for each point in Strength they have and one for each point of Weapon Damage their weapon has, {% clip Melee Damage %}.
 
 For ranged weapons you roll {% clip Ranged Damage %}
 
 The damage is reduced by the targets armor. Armor being **STR**, and any armor items or class/race bonuses.
-
-
 
 {% include clippings.html tags='attack' %}
 
@@ -107,14 +99,11 @@ To save a incapacitated character, a comrade must provide fist aid.
 As first aid can only go so far, 
 a character must seek out other methods of recovering health after that.
 
-
 Characters may recover health by sleeping, magic/ potions, medical care.
 
 The amount of health a player recovers from sleep is determined with a **Sleep** roll. 
 
 {% include clippings.html tags='health' %}
-
-
 
 ## Chases
 
@@ -123,10 +112,6 @@ The amount of health a player recovers from sleep is determined with a **Sleep**
 Invent new action types as they are needed. 
 Skills or items may dictate custom combat actions.
 
-
 ## Multiple Combat Actions
 
 If a players initiative roll exceeds **20** then the character gets a additional turn each round. The initiative of thier second turn is the amount they exceeded 20.
-
-
-
