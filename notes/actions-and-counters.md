@@ -1,6 +1,5 @@
 ---
 title: Actions and Counters.
-parent: Notes
 nav_order: 1
 has_toc: true
 ---
