@@ -1,5 +1,5 @@
 ---
-title: Example Spells
+title: Example Spells Ideas
 parent: Content
 nav_order: 1
 has_toc: true
