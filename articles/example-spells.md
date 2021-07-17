@@ -3,7 +3,7 @@ title: Example Spells
 parent: Content
 nav_order: 1
 has_toc: true
-permalink: ""
+permalink: /content/:basename
 ---
 ## Secret Exchange
 
