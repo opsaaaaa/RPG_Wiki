@@ -7,7 +7,15 @@ permalink: Game Play
 ---
 ## Secret Exchange
 
+Swap an item the caster is holding with any item within a 6 feet the caster is aware of.
+
 level: 0,1,2,3
+
+at level 0 the spell is capable of swapping small items of a low value. 
+Items that arn't important to the person possessing them.
+
+
+
 
 
 ## Blind Monocle
